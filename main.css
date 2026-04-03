@@ -1,5 +1,4 @@
 :root {
-
 --text: #ebdbb2;
 --bg-front: #2d382e;
 --bg-back: #1d2021;
@@ -7,22 +6,18 @@
 --en-text: #e1e4ba;
 --divider: #657a61;
 --edge: color-mix(in srgb, var(--divider), transparent 70%);
-
 }
-
 /* Coolvetica */
 @font-face {
   font-family: coolvetica;
   src: url("_Coolvetica Rg.otf");
   font-style: normal;
 }
-
 html,
 body {
   margin: 0;
   padding: 0;
 }
-
 .card,
 .card.nightMode {
   margin: 0;
@@ -38,7 +33,6 @@ body {
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
-
 #outer {
   width: 100%;
   min-height: calc(100vh - 48px);
@@ -46,7 +40,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 #content {
   width: 100%;
   max-width: 650px;
@@ -57,14 +50,12 @@ body {
   overflow: hidden;
   background: var(--bg-back);
 }
-
 .top {
   background-color: var(--bg-front);
   padding: 25px;
   font-size: 35px;
   border-radius: 28px 28px 0 0;
 }
-
 .bottom {
   background-color: var(--bg-back);
   padding: 25px;
@@ -72,67 +63,53 @@ body {
   border-top: 1px solid var(--divider);
   border-radius: 0 0 28px 28px;
 }
-
 .word-details,
 .word-details * {
   color: var(--accent);
 	font-size: 20px;
 	padding-bottom: 15px;
 }
-
 .word-eg,
 .word-eg * {
   color: var(--text);
 	font-size: 20px;
 	padding: 5px 25px 0 25px;
 }
-
 .small {
   font-size: 20px;
   color: var(--en-text);
-
 }
-
 .medium {
   font-size: 27px;
 }
-
 .sz {
   color: var(--en-text);
   font-size: 20px;
 }
-
 em {
   font-style: italic;
 }
-
 b {
   font-weight: 900;
 }
-
 .hidden {
   display: none;
 }
-
-
 /* ---------- inline ------------ */
 code {
   font-family: monospace, monospace;
   font-size: 20px;
-  font-weight: 600; /* negrito */
+  font-weight: 600;
   background-color: rgba(0, 0, 0, 0.35);
   padding: 3px 6px;
   border-radius: 6px;
   color: #c3db9e; 
 }
-
 code b,
 pre b {
   color: var(--accent);
   font-weight: 900;
-
 }
-
 /* ---------- block ------------ */
 pre {
   font-size: 20px;
@@ -143,11 +120,10 @@ pre {
   overflow-x: auto;
   text-align: left;
   margin-top: 15px;
-  font-weight: 600; /* negrito */
+  font-weight: 600;
 	color: #c3db9e; 
   border: 1px solid rgba(255,255,255,0.1);
 }
-
 pre code {
   font-family: monospace, monospace;
   font-size: 20px;
@@ -157,7 +133,6 @@ pre code {
   display: block;
   line-height: 1.5;
 }
-
 /* ---------- math ------------ */
 mjx-container,
 .MathJax,
@@ -169,13 +144,11 @@ mjx-container,
   display: block;
   box-sizing: border-box;
 }
-
 .katex {
   display: inline-block;
   max-width: 100%;
   vertical-align: middle;
 }
-
 /* ---------- media ------------ */
 img,
 table,
@@ -183,33 +156,45 @@ svg {
   max-width: 100%;
   height: auto;
 }
-
-/* ---------- mobile ------------ */
+/* ---------- mobile ---------- */
 .mobile .card,
 .mobile .card.nightMode {
-  font-size: 28px;
-  padding: 0;
+  font-size: 22px;
+  padding: 12px;
+  min-height: unset; 
 }
-
 .mobile #outer {
-  width: 100%;
-  min-height: calc(100vh - 48px);
+  height: 100vh; 
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.mobile #content {
-  width: 100%;
-  max-width: 650px;
-  box-sizing: border-box;
-  border-radius: 30px;
-  border: 2px solid var(--edge);
-  box-shadow: 0 6px 45px rgba(0, 0, 0, 0.4);
-  overflow: hidden;
-  background: var(--bg-back);
+.mobile .top,
+.mobile .bottom {
+  padding: 12px;
+  font-size: 24px;
 }
-
+.mobile img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mobile .small,
+.mobile .word-details,
+.mobile .word-eg,
+.mobile code,
+.mobile pre {
+  font-size: 22px;
+}
+.mobile .word-details details,
+.mobile .word-details summary {
+  margin: 0;
+  padding: 0;
+}
+.mobile .word-eg,
+.mobile .word-eg * {
+  padding: 5px 8px 0 8px;
+}
 .mobile mjx-container,
 .mobile .MathJax,
 .mobile .katex-display,
